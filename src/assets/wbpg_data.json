@@ -1,0 +1,1 @@
+{"encrypted_data":"<?php echo(base64_encode($encrypted_data)); ?>"}

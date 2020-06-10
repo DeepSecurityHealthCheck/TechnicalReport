@@ -1,0 +1,1798 @@
+{
+  "modules": {
+    "1": {
+      "name": "Smart Scan (File Reputation Services)",
+      "short_name": "FRS"
+    },
+    "2": {
+      "name": "Real-Time Scan",
+      "short_name": "RTS"
+    },
+    "3": {
+      "name": "Web Reputation",
+      "short_name": "WRS"
+    },
+    "4": {
+      "name": "Suspicious Connection Service",
+      "short_name": "C&amp;C"
+    },
+    "5": {
+      "name": "Behavior Monitoring",
+      "short_name": "BM"
+    },
+    "6": {
+      "name": "Predictive Machine Learning",
+      "short_name": "ML"
+    },
+    "8": {
+      "name": "OfficeScan Agent Self-protection",
+      "short_name": "SP"
+    },
+    "9": {
+      "name": "Device Control",
+      "short_name": "DC"
+    }
+  },
+  "conditions": {
+    "1": {
+      "name": "Smart Scan [Enabled]",
+      "description": "Enabling this setting may increase bandwidth consumption and, depending on your Smart Protection source, require an active Internet connection",
+      "module": "1"
+    },
+    "2": {
+      "name": "Real-Time Malware Scanning [Enabled]",
+      "description": "Enable virus/malware scan.",
+      "module": "2"
+    },
+    "3": {
+      "name": "Real-Time Spyware/Grayware Scanning [Enabled]",
+      "description": "Enable spyware/grayware scan",
+      "module": "2"
+    },
+    "4": {
+      "name": "Internal Agent Web Reputation Policy [Enabled]",
+      "description": "Internal Web Reputation",
+      "module": "3"
+    },
+    "5": {
+      "name": "External Agent Web Reputation Policy [Enabled]",
+      "description": "External Web Reputation",
+      "module": "3"
+    },
+    "6": {
+      "name": "Internal Agent Browser Exploit Prevention [Enabled]",
+      "description": "Internal Browser Exploit",
+      "module": "3"
+    },
+    "7": {
+      "name": "External Agent Browser Exploit Prevention [Enabled]",
+      "description": "External Browser Exploit",
+      "module": "3"
+    },
+    "8": {
+      "name": "Global C&amp;C IP List [Enabled, Block]",
+      "description": "Detect network connections made to addresses in the Global C&amp;C IP list [Block]",
+      "module": "4"
+    },
+    "9": {
+      "name": "User-defined Blocked IP List [Disabled]",
+      "description": "[Disable] Log and allow access to User-defined Blocked IP list addresses",
+      "module": "4"
+    },
+    "10": {
+      "name": "Suspicious Connection Cleanup [Enabled]",
+      "description": "Clean suspicious connections when a C&amp;C callback is detected",
+      "module": "4"
+    },
+    "11": {
+      "name": "Malware Network Fingerprinting [Enabled, Block]",
+      "description": "Detect connections using malware network fingerprinting [Block]",
+      "module": "4"
+    },
+    "12": {
+      "name": "Behavior Monitoring",
+      "description": "Enable Malware Behavior Blocking [Known threats]",
+      "module": "5"
+    },
+    "13": {
+      "name": "Malware Behavior Blocking [Enabled, Known and potential threats]",
+      "description": "Enable Malware Behavior Blocking [Known and potential threats]",
+      "module": "5"
+    },
+    "14": {
+      "name": "Document Protection [Enabled]",
+      "description": "Protect documents against unauthorized encryption or modification",
+      "module": "5"
+    },
+    "15": {
+      "name": "Document Protection: Back Up and Restore [Enabled]",
+      "description": "Automatically back up and restore files changed by suspicious programs",
+      "module": "5"
+    },
+    "16": {
+      "name": "Program Inspection [Enabled]",
+      "description": "Enable program inspection to detect and block compromised executable files",
+      "module": "5"
+    },
+    "17": {
+      "name": "Newly Encountered Program Detection [Enabled]",
+      "description": "Monitor newly encountered programs downloaded through web or email application channels [Prompt user]",
+      "module": "5"
+    },
+    "18": {
+      "name": "Newly Encountered Program Mode",
+      "description": "Monitor newly encountered programs downloaded through web or email application channels [Log only]",
+      "module": "5"
+    },
+    "19": {
+      "name": "OfficeScan Agent Services [Enabled]",
+      "description": "Protect OfficeScan agent services",
+      "module": "8"
+    },
+    "20": {
+      "name": "OfficeScan Agent Files [Enabled]",
+      "description": "Protect files in the OfficeScan agent installation folder",
+      "module": "8"
+    },
+    "21": {
+      "name": "OfficeScan Agent Registry Keys [Enabled]",
+      "description": "Protect OfficeScan agent registry keys",
+      "module": "8"
+    },
+    "22": {
+      "name": "OfficeScan Agent Processes [Enabled]",
+      "description": "Protect OfficeScan agent processes",
+      "module": "8"
+    },
+    "23": {
+      "name": "Internal Agent Device Control [Enabled]",
+      "description": "Enable Device Control",
+      "module": "9"
+    },
+    "24": {
+      "name": "Internal Agent AutoRun Blocking [Enabled]",
+      "description": "Block the AutoRun function on USB storage devices",
+      "module": "9"
+    },
+    "25": {
+      "name": "External Agent Device Control [Enabled]",
+      "description": "Enable Device Control",
+      "module": "9"
+    },
+    "26": {
+      "name": "External Agent AutoRun Blocking [Enabled]",
+      "description": "Block the AutoRun function on USB storage devices",
+      "module": "9"
+    },
+    "27": {
+      "name": "Machine Learning",
+      "description": "Predictive Machine Learning",
+      "module": "6"
+    },
+    "28": {
+      "name": "Real-Time CVE Exploit Scanning [Enabled]",
+      "description": "CVE Exploit Scanning",
+      "module": "2"
+    }
+  },
+  "profiles": {
+    "12.0.1.4345": {
+      "name": "OSCE XG Service Pack 1",
+      "conditions": [
+        12,
+        14,
+        15,
+        26,
+        7,
+        25,
+        5,
+        8,
+        24,
+        6,
+        23,
+        4,
+        27,
+        13,
+        11,
+        17,
+        18,
+        20,
+        22,
+        21,
+        19,
+        16,
+        28,
+        2,
+        1,
+        10,
+        9
+      ]
+    }
+  },
+  "domains": [
+    {
+      "UID": "A7B23472-98DA-4BE3-A71A-419347572AD0",
+      "name": "Acceptatie",
+      "is_root_domain": "1",
+      "domain_tree_index_id": "0",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "58063F08-2823-4CBD-9AE4-EB5D5FF7AE48",
+      "name": "Pilot",
+      "is_root_domain": "1",
+      "domain_tree_index_id": "1",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "CF287989-062C-4551-8EDF-BD05498AB0D5",
+      "name": "Productie",
+      "is_root_domain": "1",
+      "domain_tree_index_id": "2",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "1E5186E5-EBBE-4891-ADE6-25BE71D1301A",
+      "name": "Test",
+      "is_root_domain": "1",
+      "domain_tree_index_id": "3",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "48BF1069-ECF5-4DFC-9BE3-ADE3448D869E",
+      "name": "Workgroup",
+      "is_root_domain": "1",
+      "domain_tree_index_id": "4",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    }
+  ],
+  "agents": [
+    {
+      "UID": "E04681BB-4680-4FAF-9CFB-3FE3B1FB6B24",
+      "hostname": "BC521",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "Microsoft",
+      "client_status": "1",
+      "client_last_startup": "2018-05-22T05:03:34",
+      "client_disc_health": "1003,6018",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "2CE79704-097C-4266-8822-14E00F49C60E",
+      "hostname": "BDO-40086",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-30T06:20:36",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "EB379475-89B1-4C92-943B-E752497B008F",
+      "hostname": "BDO-40129",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-23T09:05:35",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "76748B20-9381-4DAC-8E1C-B45A1C320C4D",
+      "hostname": "BDO-42133",
+      "os_family_index_id": "1",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "1",
+      "client_last_startup": "2018-06-04T08:29:04",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "8FB12D49-179E-40CB-80C0-16688D890D98",
+      "hostname": "BDO-42970",
+      "os_family_index_id": "1",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-31T05:38:39",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "629A9100-CF00-4549-9362-6689D9A14185",
+      "hostname": "BDO-42988",
+      "os_family_index_id": "1",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-23T08:34:57",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "27ACE7C4-4D8C-4BB2-861F-87217F356787",
+      "hostname": "BDO-43047",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-31T06:10:31",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "BCA27E07-1E0A-4CFF-B252-04C3F3762371",
+      "hostname": "BDO-43065",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-06-01T04:43:57",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "35911C1F-3F8C-409F-94E5-453F29138427",
+      "hostname": "BDO-43068",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "1",
+      "client_last_startup": "2018-06-04T06:03:19",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "8E3BC38C-84F0-4FF9-9B75-C8CCE11F6940",
+      "hostname": "BDO-43126",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-09T05:42:35",
+      "client_disc_health": "1482,36105",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "5334E63A-FD8E-4037-8729-7A63448C93BC",
+      "hostname": "BDO-43208",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-09T06:49:58",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "D5D9881B-89B5-4EEE-9257-BFF69A5D604F",
+      "hostname": "BDO-43305",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-06-01T08:57:16",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "EC3577B0-8A91-4728-98B3-9D464D6A3E03",
+      "hostname": "BDO-43305",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-06-04T06:55:15",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "EEF15921-6A19-4E62-8EBF-E457560F5A5D",
+      "hostname": "BDO-43380",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-06-04T11:33:11",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "D7648618-3474-421B-B671-08FCBFA1C4F1",
+      "hostname": "BDO-43622",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-06-01T06:03:31",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    },
+    {
+      "UID": "43D1274A-20E6-4B72-932A-F7D2C2A2F0FC",
+      "hostname": "BDO-43667",
+      "os_family_index_id": "0",
+      "domain_index_id": "0",
+      "domain_tree_index_id": "2",
+      "is_virtualized": "-",
+      "client_status": "0",
+      "client_last_startup": "2018-05-28T05:08:03",
+      "client_disc_health": "OK",
+      "agent_version": "12.0.1.4456",
+      "results": [
+        "1",
+        "-",
+        "1",
+        "-",
+        "-",
+        "1",
+        "1",
+        "1"
+      ],
+      "conditions": [
+        [
+          1
+        ],
+        [
+          1,
+          "#",
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "compliancy_perc": 78
+    }
+  ],
+  "os_family_logos": {
+    "Windows 10": "Windows_10.png",
+    "Windows 8.1": "Windows_8.1.png"
+  },
+  "os_family_index": [
+    "Windows 10",
+    "Windows 8.1"
+  ],
+  "domain_index": [
+    "Productie"
+  ],
+  "domain_tree_index": [
+    "Acceptatie",
+    "Pilot",
+    "Productie",
+    "Test",
+    "Workgroup"
+  ],
+  "exclusion_matrix": {
+    "Spyware": {
+      "1": {
+        "RT": 21
+      },
+      "MP3": {
+        "MS": 21,
+        "PS": 21,
+        "SN": 21
+      }
+    },
+    "Folder": {
+      "\\Device\\HardDiskvolumeShadowCopy*": {
+        "SN": 21,
+        "RT": 21,
+        "PS": 21,
+        "MS": 21
+      }
+    },
+    "File": {
+      "%WINDIR%\\SoftwareDistribution\\Datastore\\Logs\\Edb*.jrs": {
+        "PS": 21,
+        "MS": 21,
+        "SN": 21,
+        "RT": 21
+      },
+      "%WINDIR%\\Security\\logs\\*.old": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21,
+        "PS": 21
+      },
+      "%WINDIR%\\SoftwareDistribution\\Datastore\\Logs\\tmp.edb": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21,
+        "PS": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.csv": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21
+      },
+      "%WINDIR%\\System32\\GroupPolicy\\Registry.pol": {
+        "PS": 21,
+        "MS": 21,
+        "SN": 21,
+        "RT": 21
+      },
+      "%WINDIR%\\Security\\logs\\*.log": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21,
+        "PS": 21
+      },
+      "%WINDIR%\\SoftwareDistribution\\Datastore\\DataStore.edb": {
+        "SN": 21,
+        "RT": 21,
+        "PS": 21,
+        "MS": 21
+      },
+      "%WINDIR%\\System32\\GroupPolicy\\Machine\\Registry.pol": {
+        "SN": 21,
+        "RT": 21,
+        "PS": 21,
+        "MS": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.chk": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21,
+        "PS": 21
+      },
+      "%WINDIR%\\SoftwareDistribution\\Datastore\\Logs\\Edb*.log": {
+        "MS": 21,
+        "PS": 21,
+        "RT": 21,
+        "SN": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.cmtx": {
+        "PS": 21,
+        "MS": 21,
+        "SN": 21,
+        "RT": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.ccv": {
+        "PS": 21
+      },
+      "%WINDIR%\\System32\\GroupPolicy\\Us": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21,
+        "PS": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.log": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21,
+        "PS": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.edb": {
+        "MS": 21,
+        "PS": 21,
+        "RT": 21,
+        "SN": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.xml": {
+        "RT": 21,
+        "SN": 21,
+        "MS": 21,
+        "PS": 21
+      },
+      "%WINDIR%\\SoftwareDistribution\\Datastore\\Logs\\Edb.chk": {
+        "PS": 21,
+        "MS": 21,
+        "SN": 21,
+        "RT": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.sdb": {
+        "SN": 21,
+        "RT": 21,
+        "PS": 21,
+        "MS": 21
+      },
+      "%WINDIR%\\SoftwareDistribution\\Datastore\\Logs\\Res*.log": {
+        "PS": 21,
+        "MS": 21,
+        "SN": 21,
+        "RT": 21
+      },
+      "%ALLUSERSPROFILE%\\ntuser.pol": {
+        "PS": 21,
+        "MS": 21,
+        "SN": 21,
+        "RT": 21
+      },
+      "%WINDIR%\\Security\\Database\\*.jrs": {
+        "MS": 21,
+        "PS": 21,
+        "RT": 21,
+        "SN": 21
+      }
+    },
+    "client_count": 21
+  }
+}
