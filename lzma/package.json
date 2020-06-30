@@ -37,7 +37,7 @@
   "deprecated": false,
   "description": "A JavaScript implementation of the Lempel-Ziv-Markov (LZMA) chain compression algorithm",
   "devDependencies": {
-    "uglify-js": "=2.4.16"
+    "uglify-js": "=3.9.4"
   },
   "homepage": "http://nmrugg.github.com/LZMA-JS/",
   "keywords": [
